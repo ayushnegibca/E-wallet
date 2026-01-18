@@ -14,7 +14,6 @@ E-wallet is a Java Spring Boot microservice for managing user wallets, balances,
 - Redis (OTP storage, optional locks)
 - Kafka (transactions, notifications)
 - JWT for access tokens (session management)
-- Flyway or Liquibase for DB migrations
 
 ## High-level architecture
 
@@ -137,7 +136,6 @@ app.otp.ttl-seconds=300
 
 Notes:
 - Use environment variables or externalized configuration for secrets and connection strings.
-- Use Flyway/Liquibase for production DB migrations.
 
 ## Example flows (curl)
 
@@ -177,7 +175,7 @@ curl -X POST https://api.example.com/wallets/transfer \
 
 ## Contributing
 
-Pull requests welcome. Please include tests for critical paths (transfers, balance updates) and ensure Flyway migrations are included.
+Pull requests welcome. Please include tests for critical paths (transfers, balance updates).
 
 ---
 
